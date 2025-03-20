@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szabó Judit - Oktatási Adminisztrátor</title>
+    <style>
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #e6edf7;
+            --text-color: #333;
+            --light-color: #f7f9fc;
+            --dark-color: #2c3e50;
+            --accent-color: #f39c12;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            background-color: var(--light-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: var(--secondary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+            border: 3px solid white;
+            font-size: 3rem;
+            color: var(--primary-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .job-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .profile-text {
+            margin-bottom: 1rem;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-icon {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .experience-item {
+            margin-bottom: 2rem;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .job-title-company {
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+        
+        .job-date {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .job-description ul {
+            list-style-type: none;
+        }
+        
+        .job-description li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .job-description li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .skill-item {
+            background-color: var(--secondary-color);
+            padding: 0.8rem;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        
+        .achievements-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .achievements-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .language-item, .computer-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .job-header {
+                flex-direction: column;
+            }
+            
+            .header-content {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="profile-img">
+                SJ
+            </div>
+            <h1>Szabó Judit</h1>
+            <div class="job-title">Program Koordinátor - Károli Gáspár Egyetem</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="section" id="profile">
+            <h2>Profil</h2>
+            <p class="profile-text">Oktatási adminisztrátor vagyok, 23 éves tapasztalattal a felsőoktatásban. Feladatom, hogy az oktatási programok zökkenőmentesen működjenek, és biztonságos, produktív tanulási környezetet biztosítsak. Fő feladatom a magas szintű adminisztratív támogatás nyújtása az oktatóknak, hallgatóknak és vendégeknek.</p>
+        </section>
+
+        <section class="section" id="contact">
+            <h2>Elérhetőség</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <span>szjudus@yahoo.com</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <span>+36 20 933 55 64</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🏢</span>
+                    <span>Károli Gáspár Református Egyetem, Budapest</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <h2>Szakmai Tapasztalat</h2>
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title-company">Program Koordinátor - Angol nyelvű Pszichológia BA program</div>
+                    <div class="job-date">2018 November - Jelenleg</div>
+                </div>
+                <div class="job-company">Károli Gáspár Református Egyetem, Budapest</div>
+                <div class="job-description">
+                    <ul>
+                        <li>Mintegy 100 nemzetközi hallgató felvételi folyamatának szervezése, koordinálása, adminisztrálása különböző ösztöndíjprogramok (Stipendium Hungaricum, SFYC, DIASPORA, KÁROLI) és önköltséges képzésben részt vevő hallgatók számára</li>
+                        <li>Magas szintű adminisztratív támogatás nyújtása nemzetközi hallgatóknak és oktatói karnak</li>
+                        <li>BA program adminisztratív és operatív tevékenységeinek koordinálása szoros együttműködésben a Tanulmányi Osztállyal és Nemzetközi Irodával</li>
+                        <li>Filmklubok, Nemzetközi Estek, karácsonyi bulik, kirándulások, társasági események szervezése a BA hallgatók számára, valamint módszertani és nyelvi képzési workshopok szervezése az oktatói kar számára</li>
+                        <li>Az ERASMUS mobilitási program pályázati folyamatának adminisztrálása a magyar BA hallgatók számára és a mobilitás végi eredmények rögzítése - alkalmanként kb. 40 pályázó</li>
+                        <li>Kurzus- és vizsgajelentkezések adminisztrálása és a tanulmányi előrehaladás nyomon követése a NEPTUN tanulmányi rendszerben</li>
+                        <li>Hallgatói kérdések kezelése - pl. kredittranszfer, ösztöndíj-hosszabbítás, ajánlólevelek írása, tanácsadás a tanulmányi programról, pszichológus vagy pszichiáter keresése</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="achievements">
+            <h2>Eredmények</h2>
+            <ul class="achievements-list">
+                <li>Az angol nyelvű Pszichológia BA program alapoktól történő bevezetése az Intézet vezetőjének irányítása alatt</li>
+                <li>Marketing anyagok fejlesztése, a tanszéki weboldal kezelése és frissítése - promóciós film szerkesztése jelenleg is folyamatban</li>
+                <li>Moodle platform fejlesztése a hallgatók számára szükséges adminisztratív és tanulmányi információk biztosítására</li>
+                <li>Toborzási folyamat kiépítése és finomítása (szoros együttműködésben a Tanulmányi Osztállyal és a Nemzetközi Irodával) és nyilvántartások vezetése - évente kb. 100 nemzetközi hallgató számára szóbeli interjúk levezetése</li>
+                <li>Gólyacsomag és Hallgatói Kézikönyv kidolgozása a nemzetközi hallgatók számára a hallgatói feladatok standardizálásának biztosítása érdekében</li>
+                <li>Lime Survey Minőségbiztosítási felmérés levezetése a BA program minőségével kapcsolatos visszajelzések gyűjtésére - oktatók és hallgatók is kitöltötték a kérdőívet célkitűzéseikről és eredményeikről</li>
+            </ul>
+        </section>
+
+        <section class="section" id="skills">
+            <h2>Kulcskompetenciák</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Nemzetközi gondolkodásmód</div>
+                <div class="skill-item">Empátia és megértés</div>
+                <div class="skill-item">Emberek irányítása</div>
+                <div class="skill-item">Információmegosztás</div>
+                <div class="skill-item">Gyors alkalmazkodás a változásokhoz</div>
+                <div class="skill-item">Csapatjátékos hozzáállás</div>
+                <div class="skill-item">Fejlődésre törekvés</div>
+                <div class="skill-item">Rugalmasság</div>
+            </div>
+        </section>
+
+        <section class="section" id="languages">
+            <h2>Nyelvtudás</h2>
+            <div class="language-item">
+                <span>Magyar</span>
+                <span>Anyanyelvi</span>
+            </div>
+            <div class="language-item">
+                <span>Angol</span>
+                <span>Felsőfokú - Cambridge Proficiency Vizsga</span>
+            </div>
+        </section>
+
+        <section class="section" id="computer-skills">
+            <h2>Számítógépes Ismeretek</h2>
+            <div class="computer-item">
+                <span>Microsoft Office</span>
+                <span>Outlook, Word, Excel, PowerPoint</span>
+            </div>
+            <div class="computer-item">
+                <span>NEPTUN</span>
+                <span>Adminisztratív rendszer (felhasználó)</span>
+            </div>
+            <div class="computer-item">
+                <span>Dream Apply</span>
+                <span>Alapismeretek</span>
+            </div>
+            <div class="computer-item">
+                <span>POSZEIDON</span>
+                <span>Adminisztratív rendszer (felhasználó)</span>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Szabó Judit - Program Koordinátor</p>
+    </footer>
+</body>
+</html>
